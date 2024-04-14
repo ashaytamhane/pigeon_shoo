@@ -79,7 +79,7 @@ def detect_motion():
                 if play_flag==1:
                      play_mp3()
                      timestamp = time.strftime("%Y%m%d_%H%M%S")
-                     image_filename = f"pics/motion-"+str(timestamp)+".jpg"
+                     image_filename = f"motion-"+str(timestamp)+".jpg"
                      cv2.imwrite(image_filename, image)
 
 	    # Draw bounding boxes around moving objects
