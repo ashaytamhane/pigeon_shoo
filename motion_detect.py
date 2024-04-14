@@ -14,9 +14,9 @@ rawCapture = PiRGBArray(camera, size=(640, 480))
 
 # Initialize pygame
 pygame.mixer.init()
-#beep_sound = pygame.mixer.Sound("dog-barking.mp3")  # Change "beep.wav" to the path of your beep sound file
+#beep_sound = pygame.mixer.Sound("dog-barking.mp3") 
 
-pygame.mixer.music.load("/home/ashay/pigeon_shoo/dog-barking.mp3")
+pygame.mixer.music.load("dog-barking.mp3")
 
 #pygame.mixer.init()
 
@@ -24,7 +24,7 @@ pygame.mixer.music.load("/home/ashay/pigeon_shoo/dog-barking.mp3")
 def play_mp3():
     # Connect to the Bluetooth speaker
     # Load and play the MP3 file
-    #pygame.mixer.music.load("/home/ashay/pigeon_shoo/dog-barking.mp3")  # Replace "path_to_your_audio_file.mp3" with the path to your MP3 file
+    #pygame.mixer.music.load("dog-barking.mp3")  # Replace "path_to_your_audio_file.mp3" with the path to your MP3 file
     pygame.mixer.music.play()
 
     # Wait for the audio to finish playing
@@ -79,7 +79,7 @@ def detect_motion():
                 if play_flag==1:
                      play_mp3()
                      timestamp = time.strftime("%Y%m%d_%H%M%S")
-                     image_filename = f"/home/ashay/pigeon_shoo/pics/motion-"+str(timestamp)+".jpg"
+                     image_filename = f"pics/motion-"+str(timestamp)+".jpg"
                      cv2.imwrite(image_filename, image)
 
 	    # Draw bounding boxes around moving objects
